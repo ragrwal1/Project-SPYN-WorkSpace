@@ -1,3 +1,4 @@
+%global constants for quick adjustments
 turnKP = 0.5;
 turnKI = 0.0;
 turnKD = 0.1;
@@ -11,9 +12,7 @@ timeBackFromWall = 0.1;
 
 
 
-
-
-
+%function movers forward using PID based adjustment until the force sensor is pressed. 
 function forwardUntilBreak(brick, SensorPort, speed, kp, ki, kd)
     % Initialize variables
     previous_error = 0;
@@ -68,7 +67,7 @@ end
 
 
 
-
+%function moves forward using PID based adjustment for a specified amount of time. Includes a safety mechanism if force is felt. 
 function forwardFor(brick, SensorPort, speed, kp, ki, kd, timeLimit)
     % Initialize variables
     previous_error = 0;
@@ -136,18 +135,18 @@ end
 
 
 
-
+%rudimentary motor start
 function startMotors(speed)
     brick.moveMotor('BC', speed);
 end
 
 
-
+%rudimentary motor stop
 function stopMotors()
     brick.stopMotor('BC', 'Brake')
 end
 
-
+%PID based turn function that takes a target angle. 
 function turnPID(brick, SensorPort, target_angle, kp, ki, kd)
     % Initialize variables
     previous_error = 0;
@@ -197,7 +196,7 @@ function turnPID(brick, SensorPort, target_angle, kp, ki, kd)
 end
 
 
-
+%deprecated function 
 function leftTurnWithPID(brick, SensorPort, target_angle, kp, ki, kd)
     % Initialize variables
     previous_error = 0;
