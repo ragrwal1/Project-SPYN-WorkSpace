@@ -12,6 +12,10 @@ timeBackFromWall = 0.1;
 
 
 
+
+
+
+
 %function movers forward using PID based adjustment until the force sensor is pressed. 
 function forwardUntilBreak(brick, SensorPort, speed, kp, ki, kd)
     % Initialize variables
