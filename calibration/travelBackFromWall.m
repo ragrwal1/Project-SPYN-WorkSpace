@@ -1,6 +1,4 @@
-
-
-%this is a global constants for quick adjustments
+% this is a global constants for quick adjustments
 turnKP = 0.5;
 turnKI = 0.0;
 turnKD = 0.1;
@@ -11,6 +9,18 @@ forwardKD = 0.2;
 
 straightSpeed = 10;
 timeBackFromWall = 0.1;
+
+
+
+forwardUntilBreak(brick, SensorPort, straightSpeed, forwardKP, forwardKI, forwardKD);
+
+pause(0.5);
+
+timeBackFromWall = input('Enter the time to move backward for calibration: ');
+
+forwardFor(brick, SensorPort, -straightSpeed, forwardKP, forwardKI, forwardKD, timeBackFromWall);
+
+
 
 
 

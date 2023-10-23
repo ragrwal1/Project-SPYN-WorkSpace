@@ -1,6 +1,6 @@
 
 % Declare global variable in main workspace
-global direction
+direction
 
 % Initialize to 'north' if you want
 direction = 'north';
