@@ -16,10 +16,7 @@ forwardUntilBreak(brick, SensorPort, straightSpeed, forwardKP, forwardKI, forwar
 
 pause(0.5);
 
-timeBackFromWall = input('Enter the time to move backward for calibration: ');
-
 forwardFor(brick, SensorPort, -straightSpeed, forwardKP, forwardKI, forwardKD, timeBackFromWall);
-
 
 
 
